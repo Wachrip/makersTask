@@ -4,16 +4,10 @@ function getTi() {
     var hours = timer.getHours();
     var minutes = timer.getMinutes();
     var seconds = timer.getSeconds();
-    if(hours < 10 && minutes<10 && seconds<10)
-    str+= `0${timer.getHours()}:0${timer.getMinutes()}:0${timer.getSeconds()}`;
-    else if(minutes < 10 && seconds<10)
-    str+= `${timer.getHours()}:0${timer.getMinutes()}:0${timer.getSeconds()}`;
-    else if(seconds<10) {
-    str+= `${timer.getHours()}:${timer.getMinutes()}:0${timer.getSeconds()}`;
-    }
-    else {
-    str+= `${timer.getHours()}:${timer.getMinutes()}:${timer.getSeconds()}`;
-    }
+    if(hours<10) hours="0"+timer.getHours();
+    if(minutes<10) minutes="0"+timer.getMinutes();
+    if(seconds<10) seconds="0"+timer.getSeconds();
+    str+= `${hours}:${minutes}:${seconds}`;
     console.log(str);
 }
 
