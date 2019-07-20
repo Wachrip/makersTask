@@ -1,13 +1,13 @@
-var arr = [1,2,3,4,5];
+var array = [1,2,3,4,5];
 
-minMax(arr);
+minMax(array);
 
 
 function minMax (arr){
     sortArr = arr.sort((a,b) => a-b);
     maxSum=0;
     minSum=0;
-    for(var i=0; i<4; i++) {
+    for(var i=0; i<array.length-1; i++) {
         minSum+=sortArr[i];
         maxSum+=sortArr[i+1];
     }

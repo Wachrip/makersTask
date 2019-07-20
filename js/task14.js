@@ -1,14 +1,10 @@
-String.prototype.sub_String = function() 
-{
-  var subset = [];
-  for (var m = 0; m < this.length; m++) 
-  {
-    for (var n = m+1; n<this.length+1; n++) 
-    {
-      subset.push(this.slice(m,n));
-    }
-  }
-  return subset;
-};
+var enterStr = "dog";
 
-console.log("dog".sub_String());
+var result = [];
+for (i=0; i<enterStr.length;i++){
+    for (j=i+1;j<enterStr.length+1;j++){
+        result.push(enterStr.slice(i,j));
+    }
+}
+
+console.log(result);

@@ -10,6 +10,6 @@ false && true
 false
 
 3.("123" == 123) || ((10 <= 10) && ('' === false))
-false || (true && false)
-false || false
-false
+true || (true && false)
+true || false
+true
