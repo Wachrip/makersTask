@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <ol id="todoList">
+    </ol>
+
+    <script>
+        let olVar = document.querySelector('#todoList');
+        let tasks = ['Купить хлеб', 'Сделать бутерброд', 'Почистить зубы', 'Посмотреть фильм', 'Лечь спать'];        
+        let addLi = [];
+
+        for(let i =0; i< tasks.length;i++) {
+            addLi = document.createElement('li');
+            olVar.appendChild(addLi);
+            olVar.children[i].textContent = tasks[i];
+        }
+
+    </script>
+</body>
+</html>

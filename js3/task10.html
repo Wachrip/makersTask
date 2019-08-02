@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changePhoto()">Change photo</button>
+
+    <img src="http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg", width: "240", height: "160" />
+
+<script>
+    function changePhoto() {
+        let images = [ {
+        src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg", 
+        width : "240",
+        height: "160", 
+        },
+
+        {
+        src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg", 
+        width : "240",
+        height: "160", 
+        },
+        
+        {
+        src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg", 
+        width : "240",
+        height: "160", 
+        }        
+        ]
+
+        let preBuffer = [];
+        for(let i = 0, j = images.length; i<j ;i++) {
+            preBuffer[i] = new Image();
+            preBuffer[i].src = images[i].src;
+            preBuffer[i].width = images[i].width;
+            preBuffer[i].height = images[i].height;
+        }
+
+        function getRandomVal(min,max) {
+            imn = Math.floor(Math.random() * (max - min +1)) +min ;
+            return preBuffer[imn];
+        }
+
+    let newImage = getRandomVal(0,preBuffer.length-1);
+
+    var showImages = document.getElementsByTagName('img');
+    let l = showImages.length;
+
+    for(let p=0; p<l; p++) {
+        showImages[0].parentNode.removeChild(showImages[0]);
+    }
+
+    document.body.appendChild(newImage);
+    }
+</script>
+</body>
+</html>

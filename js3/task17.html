@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="container"></div>
+            <form>
+                <input class="addTask" type="text">
+                <button>add</button>
+            </form>
+
+    <script>        
+        let containter = document.querySelector('#container');
+        let addButton = document.querySelector('button');
+        let inputText = document.querySelector('input');
+        
+        addButton.addEventListener('click', function(event) {
+            let addDiv = document.createElement('div');
+            let addBtn = document.createElement('button');
+            event.preventDefault();
+            console.log();           
+
+            addDiv.textContent = inputText.value;
+            addBtn.textContent = 'X';
+
+            containter.append(addBtn);
+            containter.append(addDiv);
+
+            addBtn.addEventListener('click', function() {
+                addBtn.remove();
+                
+            })
+        })
+    </script>
+</body>
+</html>

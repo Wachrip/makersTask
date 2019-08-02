@@ -1,0 +1,19 @@
+img {
+    width: 75px;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(161, 161, 161);
+  }
+  
+  li {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    background-color: #fff;
+  }

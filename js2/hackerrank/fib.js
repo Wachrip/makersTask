@@ -9,3 +9,5 @@ function fibonacci(n) {
     }
     return number;
 }
+
+console.log(fibonacci(2));
